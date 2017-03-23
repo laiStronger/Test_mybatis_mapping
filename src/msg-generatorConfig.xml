@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="context1">
+
+		<!-- mysql配置 <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/sy" 
+			userId="root" password="504633962"> </jdbcConnection> -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.1.171:3306/o2o_dev_06?characterEncoding=utf8&amp;autoReconnect=true&amp;failOverReadOnly=false"
+			userId="o2o" password="o2o" />
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- model生成文件的存放位置 <javaModelGenerator targetPackage="sy.model" targetProject="D:\software\mybatis\file\src"> 
+			<property name="enableSubPackages" value="true" /> <property name="trimStrings" 
+			value="true" /> </javaModelGenerator> -->
+		<javaModelGenerator targetPackage="com.yiba.vo.product"
+			targetProject="E:\bean">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- sqlmap生成文件的存放位置 <sqlMapGenerator targetPackage="sy.mapping" targetProject="D:\software\mybatis\file\src"> 
+			<property name="enableSubPackages" value="true" /> </sqlMapGenerator> -->
+		<sqlMapGenerator targetPackage="com.yiba.mapper.msg"
+			targetProject="E:\bean\mapping">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<!-- dao生成文件的存放位置 <javaClientGenerator type="XMLMAPPER" targetPackage="sy.dao" 
+			targetProject="D:\software\mybatis\file\src"> <property name="enableSubPackages" 
+			value="true" /> </javaClientGenerator> -->
+		<javaClientGenerator targetPackage="com.yiba.common.dao.msg"
+			targetProject="E:\bean\dao" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- 要生成的表 <table tableName="tbug" domainObjectName="Bug" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false"></table> -->
+		<!-- <table schema="o2o" tableName="user_info"> <columnOverride column="???" 
+			property="???" /> </table> -->
+		<table tableName="product_brand_info" domainObjectName="ProductBrandInfoVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+		<table tableName="product_info" domainObjectName="ProductInfoVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+		<!-- <table tableName="product_param" domainObjectName="ProductParamVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+		<table tableName="product_brand_model" domainObjectName="ProductBrandModelVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+
+		<table tableName="product_model_param" domainObjectName="ProductModelParamVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+
+		<table tableName="product_sku" domainObjectName="ProductSkuVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+
+	<table tableName="product_pricing_param" domainObjectName="ProductPriceParamVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+		<table tableName="product_pricing_value" domainObjectName="ProductPriceValueVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+		<table tableName="product_ex_info" domainObjectName="ProductExInfoVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		
+		
+		
+		<table tableName="product_label" domainObjectName="ProductLabelVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+		<table tableName="product_class_param" domainObjectName="ProductClassTypeVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+		
+
+		<table tableName="product_class_param_value" domainObjectName="ProductClassParamValueVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+
+		
+		
+		<table tableName="class_type" domainObjectName="ProductClassTypeVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+		
+		<table tableName="param_dictionary" domainObjectName="ProductModelParamDict"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		
+		
+		
+		
+		
+		
+		
+			<table tableName="product_label_ref" domainObjectName="ProductLabelRef"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		
+		
+			
+			<table tableName="product_collect" domainObjectName="productCollect"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		
+		
+			<table tableName="product_mark_down_notice" domainObjectName="productMarkDownNotice"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		
+			<table tableName="su_subscribe" domainObjectName="suSubscribe"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		
+		
+			<table tableName="su_subscribe_product" domainObjectName="suSubscribeProduct"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+			
+			
+			
+			
+			
+			<table tableName="product_class_param" domainObjectName="ProductClassParam"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+						
+			<table tableName="product_param" domainObjectName="ProductParam"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+			
+			
+			
+			
+		<table tableName="product_bargain" domainObjectName="ProductBargain"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+			
+			
+			
+			
+		<table tableName="product_renew_deadline" domainObjectName="ProductRenewDeadline"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+			
+		
+		
+		<table tableName="product_renew_price_scope" domainObjectName="ProductRenewPriceRcopeVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+			
+		<table tableName="product_renew_scope" domainObjectName="ProductRenewScopeVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+			
+		
+		<table tableName="product_renew_type" domainObjectName="ProductRenewTypeVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+			
+		<table tableName="user_maintain_renew_scope" domainObjectName="UserMaintainRenewScopeVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+			
+			
+			
+	   <table tableName="order_shopping_cat" domainObjectName="OrderShoppingCat"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+			
+	   
+	    <table tableName="user_maintain_basic" domainObjectName="UserMaintainBasicVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+		
+	    <table tableName="user_maintain_basic" domainObjectName="UserMaintainBasicVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+			
+		<table tableName="order_operate_history" domainObjectName="OrderOperateHistoryVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+			
+		<table tableName="order_goods" domainObjectName="OrderGoods"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+			
+		<table tableName="order_refund_product" domainObjectName="OrderRefundProductVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+			    	
+		<table tableName="order_info" domainObjectName="OrderInfoVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>	
+		
+		 -->
+		
+		
+	    
+	</context>
+</generatorConfiguration>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="context1">
+
+		<!-- mysql配置 <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/sy" 
+			userId="root" password="504633962"> </jdbcConnection> -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.1.171:3306/o2o_dev_06?characterEncoding=utf8&amp;autoReconnect=true&amp;failOverReadOnly=false"
+			userId="o2o" password="o2o" />
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- model生成文件的存放位置 -->
+		<javaModelGenerator targetPackage="com.yiba.vo"
+			targetProject="Test_mybatis_mapping">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- sqlmap生成文件的存放位置 -->
+		<sqlMapGenerator targetPackage="com.yiba.mapping"
+			targetProject="Test_mybatis_mapping">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<!-- dao生成文件的存放位置  -->
+		<javaClientGenerator targetPackage="com.yiba.dto"
+			targetProject="Test_mybatis_mapping" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table tableName="user_info" domainObjectName="UserInfoVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+			
+		<table tableName="agen_kpi_info" domainObjectName="AgenKpiInfoVO"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		
+	</context>
+</generatorConfiguration>
